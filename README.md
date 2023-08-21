@@ -1,18 +1,17 @@
-# Vehicle_Rental_Website
+Travel Buddy - Vehicle Rental System
 
-A Vehicle rental system is a software application that is used to store, manage, and 
-retrieve data related to vehicles available for renting and already booked. This type of system 
-is used by businesses and organizations that need to keep track of information about 
-vehicles, such as their vehicles booked status and customer details and basically used as a 
-platform for their customers to book vehicles. One of the main reasons for using an rental 
-system is to improve the efficiency of managing and retrieving vehicle information. Data in a 
-central location, it becomes much easier to search for and retrieve the information, rather 
-than having to manually look. This saves a lot of time and effort, especially for organizations 
-that have a large number of vehicles and bookings in their inventory.
+Travel Buddy is a robust vehicle rental system designed to streamline the management of rental vehicle data. This web-based application employs Oracle Database 11g Express as its backend to efficiently store, manage, and retrieve critical information regarding available and booked vehicles.
 
-The oracle Database 11g express is used for the database in the webpage. It is a
-database system where we create table by performing the SQL queries and insert data into
-the tables using SQL commands. And we connect this database to our front end webpage to
-where the data need to be printed or represented. For connecting oracle to the frontend part 
-we are going to use Django with python as platform.
-We have named our system as Travel Buddy.
+Key Features:
+
+Efficient Data Management: Travel Buddy simplifies the process of tracking vehicle data, including booking status and customer details. It acts as a centralized repository for all vehicle-related information.
+
+Time-Saving: By centralizing data, the system significantly reduces the time and effort required for searching and retrieving information. This is particularly beneficial for organizations with extensive vehicle inventories and bookings.
+
+User-Friendly Interface: The frontend of Travel Buddy is built using Django, a Python-based web framework. This provides a user-friendly and intuitive platform for customers to book vehicles.
+
+Database Integration: Oracle Database 11g Express serves as the backend database, allowing for efficient data storage and retrieval. SQL queries and commands are used to create tables and insert data, ensuring data integrity.
+
+Seamless Connectivity: The system seamlessly connects the frontend and backend, enabling real-time access to vehicle information for both customers and administrators.
+
+Travel Buddy simplifies vehicle rental operations, offering a comprehensive solution for businesses and organizations looking to enhance their vehicle management efficiency. With its powerful database and user-friendly interface, it ensures a hassle-free experience for customers and administrators alike.
