@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+  table {
+    border-collapse: collapse;
+    width: auto;
+      font-size: 20px;
+  }
+
+  td, th {
+    border: 3px solid #dddddd;
+    text-align: center;
+    padding: auto;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.vertical-table th, td {
+  border: 1px solid black;
+  margin: 5px;
+}
+.details{
+    position: fixed;
+    margin-left: 55%;
+    margin-bottom: 30%;
+}
+.brand{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dt {
+
+    margin: 20px;
+    max-width: 600px;
+    height: px;
+    position: fixed;
+    margin-left: 15%;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dt::placeholder {
+    color: black;
+    background-color: white;
+    font-size: 25px;
+    border: 20px;
+
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position: fixed;
+}
+
+.header.active {
+    box-shadow: var(--box-shadow);
+    padding: 2rem 5%;
+
+}
+
+.image-div{
+    margin-left: 3%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+}
+.image-div img {
+    width: 60%;
+    height: 60%;
+    position: fixed;
+}
+
+
+nav {
+    display: flex;
+    padding: 1% 8%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 300px;
+
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}

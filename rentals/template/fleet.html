@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
+
+    <title> TRAVEL BUDDY| Fleet </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style_fleet.css'%}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <section class="header">
+        <nav>
+            <a href="index.html" target="_blank"><img src="{% static 'img/logo-removebg-preview.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="bi bi-x" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="http://127.0.0.1:8000/indexloginpage/">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/fleetpage/">Our Fleet</a></li>
+                    <li><a href="http://127.0.0.1:8000/leasepage/">Lease Your Bike</a></li>
+                    <li><a href="http://127.0.0.1:8000/offerspage/">Offers</a></li>
+                    <li><a href="http://127.0.0.1:8000/contactpage/">Contact</a></li>
+                    <li><a href="http://127.0.0.1:8000/indexpage/">Logout</a></li>
+                </ul>
+            </div>
+
+            <i class="bi bi-list" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <!------campus---->
+
+    <section class="campus">
+        <h1>Our Bike Brands Collection</h1>
+        <p>Click on your fav Brand to explore more</p>
+
+        <div class="row1">
+            
+            <div class="campus-col">
+                <img src="https://i.pinimg.com/originals/4a/5e/8d/4a5e8da95a0145c8603e38cf6ef7ef22.jpg">
+                <a href="?company=Bajaj">
+                <div class="layer">
+                    <h3>Bajaj</h3>
+                </div></a>
+            </div>
+            <div class="campus-col">
+                <img src="https://e0.pxfuel.com/wallpapers/124/439/desktop-wallpaper-honda-emblem-logo-brands-for-3d.jpg">
+                <a href="?company=Hondaa">
+                <div class="layer">
+                    <h3>Honda</h3>
+                </div></a>
+            </div>
+            <div class="campus-col">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2a933f2c-4a04-4512-82a3-cb43e033a944/d3by1zf-7a89edf6-bb65-4b4d-a0cc-eee74cfd4656.jpg/v1/fill/w_1280,h_640,q_75,strp/ktm_logo_by_limitless_design_d3by1zf-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQwIiwicGF0aCI6IlwvZlwvMmE5MzNmMmMtNGEwNC00NTEyLTgyYTMtY2I0M2UwMzNhOTQ0XC9kM2J5MXpmLTdhODllZGY2LWJiNjUtNGI0ZC1hMGNjLWVlZTc0Y2ZkNDY1Ni5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.n4ydniEGDbOiyzPh1tBNPd9r7ZTtEWAXBkA3oI76MXw">
+                <a href="?company=KTM">
+                <div class="layer">
+                    <h3>KTM</h3>
+                </div></a>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="campus-col">
+                <img src="https://wallpaperaccess.com/full/1575415.jpg">
+                <a href="?company=Royal Enfield">
+                <div class="layer">
+                    <h3>Royal Enfield</h3>
+                </div></a>
+            </div>
+            <div class="campus-col">
+                <img src="https://wallpaperaccess.com/full/1607577.jpg">
+                <a href="?company=Suzuki">
+                <div class="layer">
+                    <h3>Suzuki</h3>
+                </div></a>
+            </div>
+            <div class="campus-col">
+                <img src="https://i.pinimg.com/originals/44/12/69/44126986f218b837262af08d21acb441.jpg">
+                <a href="?company=TVS">
+                <div class="layer">
+                    <h3>TVS</h3>
+                </div></a>
+            </div>
+        </div>
+    </section>
+    <section class="campus">
+        <h1>Our Car Brands Collection</h1>
+        <p>Click on your fav Brand to explore more</p>
+
+        <div class="row1">
+            <div class="campus-col">
+                <img src="https://e0.pxfuel.com/wallpapers/124/439/desktop-wallpaper-honda-emblem-logo-brands-for-3d.jpg">
+                <a href="?company=Honda">
+                <div class="layer">
+                    <h3>Honda</h3>
+                </div></a>
+            </div>
+            <div class="campus-col">
+                <img src="https://s1.cdn.autoevolution.com/images/news/hyundai-laughs-in-the-face-of-the-chip-shortage-thats-why-we-need-superheroes-197565_1.jpg">
+                <a href="?company=Hyundai">
+                <div class="layer">
+                    <h3>Hyundai</h3>
+                </div></a>
+            </div>
+            <div class="campus-col">
+                <img src="https://i.pinimg.com/550x/40/85/c8/4085c8d163a0db1a13af485963200ec6.jpg">
+                <a href="?company=Nissan">
+                <div class="layer">
+                    <h3>Nisan</h3>
+                </div></a>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="campus-col">
+                <img src="https://wallpapercave.com/wp/wp3593825.jpg">
+                <a href="?company=Maruthi_Suzuki">
+                <div class="layer">
+                    <h3>Maruthi_Suzuki</h3>
+                </div></a>
+            </div>
+            <div class="campus-col">
+                <img src="https://blog.ipleaders.in/wp-content/uploads/2018/03/BV-Acharya-3.jpg">
+                <a href="?company=Tata">
+                <div class="layer">
+                    <h3>Tata</h3>
+                </div></a>
+            </div>
+            <div class="campus-col">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/the-toyota-logo-is-displayed-on-car-on-the-sales-lot-at-news-photo-1636047617.jpg">
+                <a href="?company=Toyota">
+                <div class="layer">
+                    <h3>Toyota</h3>
+                </div></a>
+            </div>
+        </div>
+        <div class="modal" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Booking status </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close" data-dismiss="modal">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    </section>
+
+
+    <!----call to action -->
+
+    <section class="cta">
+        <h1> Have any Queries feel free to get in touch....</h1>
+        <a href="http://127.0.0.1:8000/contactpage/" class="hero-btn">Contact US</a>
+
+    </section>
+
+    <!-----Footer----->
+    <section class="footer">
+        <h4>About us</h4>
+        <p> Bike rentals is a shared mobility offering that allows users to own the vehicle for only the duration of their need and return after it. <br>It is a much better option economically. Users do not have to invest a huge sum of money to buy vehicles and instead spend a small amount as and when they need a two wheeler. Users also need not <br>take the burden of insurance and maintenance. We also provide 24/7 roadside assistance to customers who rent a bike in Bangalore.
+
+            Two wheelers on rent in Bangalore is a much safer <br>alternative to public transport. Users can travel to places without being dependent on anyone else while also maintaining social distance. Bike rentals in Bangalore is <br>also a safer alternative to cabs because the user doesn’t share the ride with anyone else.</p>
+        <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+
+        </div>
+
+    </section>
+
+    <!--------javascript--->
+    <script>    
+   $(document).ready(function(){
+    var urlParams = new URLSearchParams(window.location.search);
+    var showPopup = urlParams.get('show_popup');
+    var source = urlParams.get('source');
+    if (showPopup === "True") {
+        switch(source) {
+            case "page1":
+                $("#myModal .modal-body").html("Your specified booking dates are not available for that vehicle.");
+                break;
+            case "page2":
+                $("#myModal .modal-body").html("credentials are wrong try again.");
+                break;
+            case "page3":
+                $("#myModal .modal-body").html("Booking Confirmed");
+                break;
+            default:
+                $("#myModal .modal-body").html("Some other error occured.");
+                break;
+        }
+        $('#myModal').modal('show');
+    }
+});
+
+</script>
+    
+    
+    
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+
+</html>

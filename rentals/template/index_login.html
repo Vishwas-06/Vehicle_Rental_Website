@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> TRAVEL BUDDY| Home </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="http://127.0.0.1:8000/indexloginpage/" target="_blank"><img src="{% static 'img/logo-removebg-preview.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="bi bi-x" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="http://127.0.0.1:8000/fleetpage/">Our Fleet</a></li>
+                    <li><a href="http://127.0.0.1:8000/leasepage/">Lease Your Bike</a></li>
+                    <li><a href="http://127.0.0.1:8000/offerspage/">Offers</a></li>
+                    <li><a href="http://127.0.0.1:8000/contactpage/">Contact</a></li>
+                    <li><a href="http://127.0.0.1:8000/indexpage/">Logout</a></li>
+                </ul>
+            </div>
+
+            <i class="bi bi-list" onclick="showMenu()"></i>
+        </nav>
+
+
+        <div class="text-box">
+            <h1>Rent Your Dream Vehicle</h1>
+            <p> You can awail our services at less cost and with such a ease</p>
+            <a href="http://127.0.0.1:8000/aboutpage/" class="hero-btn">Click here to know more</a>
+        </div>
+
+    </section>
+    <!----course------->
+    <section class="course">
+        <h1>Rent On The Go...... </h1>
+        <a href="http://127.0.0.1:8000/fleetpage/">
+            <div class="row">
+                <div class="course-col">
+                    <h3>Bike</h3>
+                    <p>Click Here To book Bike</p>
+
+                </div>
+
+                <div class="course-col">
+                    <h3>Car</h3>
+                    <p>Click Here To book Car</p>
+                </div>
+            </div>
+        </a>
+    </section>
+
+
+    <!------campus---->
+
+    <section class="campus">
+        <h1>Our Premium Car Collection</h1>
+        <p>Contact us to book premium cars</p>
+
+        <div class="row1">
+            <div class="campus-col">
+                <img src="https://images5.alphacoders.com/546/thumb-1920-546892.jpg">
+                <div class="layer">
+                    <h3>Range Rover</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="https://www.technocrazed.com/wp-content/uploads/2015/12/Audi-Wallpaper-19.jpg">
+                <div class="layer">
+                    <h3>Audi</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="https://cdn.pixabay.com/photo/2016/06/20/22/35/mercedes-benz-1470136__340.jpg">
+                <div class="layer">
+                    <h3>Mercedes</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="campus">
+        <h1>Our Premium Bike Collection</h1>
+        <p>Contact us to book premium Bikes</p>
+
+        <div class="row1">
+            <div class="campus-col">
+                <img src="https://ic.maxabout.us//bikes/kawasaki/new-kawasaki-ninja-650//2020-Kawasaki-Ninja-650-15.jpg/thumb/700">
+                <div class="layer">
+                    <h3>Kawasaki</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFnHDcQv7JQMFzsbA6-bSLLu20_N5pEELLOw&usqp=CAU">
+                <div class="layer">
+                    <h3>Harley Davidson</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtl70nUY25NOhdp0EHb0CSLogid-w_kQ6P7w&usqp=CAU">
+                <div class="layer">
+                    <h3>BMW</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!------MOST RENTING BIKES----->
+    <section class="facilities">
+        <h1>Our Most Renting bikes</h1>
+        <p>Explore our fleet to book now</p>
+        <div class="row1">
+            <div class="facilities-col">
+                <img src="https://www.indiacarnews.com/wp-content/uploads/2018/04/Bajaj-Pulsar-250-1.jpg"></a>
+                <h3>Pulsar NS250</h3>
+                <p> Cost:900₹/day <br>Mileage:35km/l </p>
+
+            </div>
+            <div class="facilities-col">
+                <img src="https://ic1.maxabout.us/autos/tw_india//N/2020/5/new-honda-activa-6g-in-pearl-precious-white-color.jpg">
+                <h3>Activa 6G</h3>
+                <p>Cost:500₹/day <br>Mileage:55km/l </p>
+            </div>
+            <div class="facilities-col">
+                <img src="https://www.motorbeam.com/wp-content/uploads/2023-Yamaha-FZ-15-Racing-Blue.jpg">
+                <h3>YAMAHA FZ</h3>
+                <p>Cost:750₹/day <br>Mileage:50km/l</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!------MOST RENTING CARS----->
+    <section class="facilities">
+        <h1>Our Most Renting Cars</h1>
+        <p>Explore our fleet to book now</p>
+        <div class="row1">
+            <div class="facilities-col">
+                <img src="{% static 'img/Maruti-Suzuki-Dzire.webp' %}">
+                <h3>Swift Dzire</h3>
+                <p> Cost:1500₹/day <br>Mileage:28km/l </p>
+
+            </div>
+            <div class="facilities-col">
+                <img src="{% static 'img/Hyundai-Creta-Right-Front-Three-Quarter-148200.webp' %}">
+                <h3>Creta</h3>
+                <p>Cost:2000₹/day <br>Mileage:20km/l </p>
+            </div>
+            <div class="facilities-col">
+                <img src="{% static 'img/i20-n-line-exterior-right-front-three-quarter-13.jpeg' %}">
+                <h3>Hyundai i20</h3>
+                <p>Cost:1300₹/day <br>Mileage:25km/l</p>
+            </div>
+        </div>
+    </section>
+
+    <!------testimonials----->
+    <section class="testimonials">
+        <h1>Our customer Reviews</h1>
+        <p>We are so happy to create rides, allow us to create a happy story for you :) </p>
+        <div class="row1">
+            <div class="testimonial-col">
+                <img src="{% static 'img/download.jpeg' %}">
+                <div>
+                    <p>
+                        Service is remarkable, bikes are also in good condition
+                    </p>
+                    <h3>Rajesh M</h3>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+
+            </div>
+            <div class="testimonial-col">
+                <img src="{% static 'img/download (2).jpeg' %}">
+                <div>
+                    <p>
+                        Cost is less and pickup and delivery is done <br>very fast, Loved the service
+                    </p>
+                    <h3>Srividya</h3>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+
+            </div>
+
+
+        </div>
+          
+
+
+    </section>
+
+    <!------Services----->
+    <section class="services">
+        <h1 class="heading2">
+            <span1>Why Rent From Us</span1>
+        </h1>
+        <div class="row1">
+            <div class="services-col">
+                <img src="{% static 'img/repair.webp' %}">
+                <h3>Hastle Free Service Through Out The City <br>In Case Of Vehicle Breakdown</h3>
+
+            </div>
+
+
+            <div class="services-col">
+                <img src="{% static 'img/delivery.jpg' %}">
+                <h3>Delivered To Your Doorstep</h3>
+
+            </div>
+            <div class="services-col">
+                <img src="{% static 'img/download (3).jpeg' %}">
+                <h3>Our Presence<br> We Are Available In Various Places</h3>
+
+            </div>
+            <div class="services-col">
+                <img src="{% static 'img/washing.jpg' %}">
+                <h3>We Sanitize Bikes After Every <br> Ride To Maintain Hygiene</h3>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <!----call to action -->
+
+    <section class="cta">
+        <h1> Have any Queries feel free to get in touch....</h1>
+        <a href="http://127.0.0.1:8000/contactpage/" class="hero-btn">Contact US</a>
+
+    </section>
+
+    <!-----Footer----->
+    <section class="footer">
+        <a href="http://127.0.0.1:8000/aboutpage/"><h4>About us</h4></a>
+        <p> Bike rentals is a shared mobility offering that allows users to own the vehicle for only the duration of their need and return after it. <br>It is a much better option economically. Users do not have to invest a huge sum of money to buy vehicles and instead spend a small amount as and when they need a two wheeler. Users also need not <br>take the burden of insurance and maintenance. We also provide 24/7 roadside assistance to customers who rent a bike in Bangalore.
+
+            Two wheelers on rent in Bangalore is a much safer <br>alternative to public transport. Users can travel to places without being dependent on anyone else while also maintaining social distance. Bike rentals in Bangalore is <br>also a safer alternative to cabs because the user doesn’t share the ride with anyone else.</p>
+        <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+
+        </div>
+
+    </section>
+
+    <!--------javascript--->
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+
+        function register() {
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';
+        }
+
+        function login() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+
+    </script>
+
+
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+
+</html>

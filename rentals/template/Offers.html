@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travel Buddy | Offers </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="http://127.0.0.1:8000/indexloginpage/" target="_blank"><img src="{% static 'img/logo-removebg-preview.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="http://127.0.0.1:8000/indexloginpage/">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/fleetpage/">Our Fleet</a></li>
+                    <li><a href="http://127.0.0.1:8000/leasepage/">Lease Your Bike</a></li>
+                    <li><a href="http://127.0.0.1:8000/offerspage/">Offers</a></li>
+                    <li><a href="http://127.0.0.1:8000/contactpage/">Contact</a></li>
+                    <li><a href="http://127.0.0.1:8000/indexpage/">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="services">
+            <h1 class="heading2">
+                <span1>Offers</span1>
+            </h1>
+            <div class="row1">
+                <div class="services-col">
+                    <img src="{% static 'img/bike-rentals-coupons.jpg' %}" height="250px" width="70px">
+                    <h3>Book a bike and grab the offer <br> </h3>
+
+                </div>
+
+
+                <div class="services-col">
+                    <img src="{% static 'img/frontline.webp' %}" height="250px" width="70px">
+                    <h3>30% off for frontline wokers</h3>
+
+                </div>
+                <div class="services-col">
+                    <img src="{% static 'img/getty_649362670_395940.jpg' %}" height="250px" width="70px">
+                    <h3>Free car delivery<br> </h3>
+
+                </div>
+                <div class="services-col">
+                    <img src="{% static 'img/WEEK.png' %}" height="250px" width="70px">
+                    <h3>Book for 3days get 1day free <br> </h3>
+
+                </div>
+            </div>
+
+
+        </section>
+
+    </section>
+
+</body>
+
+</html>

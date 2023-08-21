@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Travel Buddy | Reservation </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style333.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="http://127.0.0.1:8000/indexloginpage/" target="_blank"><img src="{% static 'img/logo-removebg-preview.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="http://127.0.0.1:8000/indexloginpage/">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/fleetpage/">Our Fleet</a></li>
+                    <li><a href="http://127.0.0.1:8000/leasepage/">Lease Your Bike</a></li>
+                    <li><a href="http://127.0.0.1:8000/offerspage/">Offers</a></li>
+                    <li><a href="http://127.0.0.1:8000/contactpage/">Contact</a></li>
+                    <li><a href="http://127.0.0.1:8000/indexpage/">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="title">Fill the details to confirm booking</div>
+            <div class="content">
+              <form action="{% url 'reservation' %}" method="post">
+                {% csrf_token %}
+                <div class="user-details">
+                  
+                  <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" name="email" placeholder="Enter email" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">License NO</span>
+                    <input type="text" name="license_no" placeholder="Enter License no of owner" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Type of ride</span>
+                    <input type="text" name="ride" placeholder="Outstation or withincity" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Alternate Mobile Number</span>
+                    <input type="text" name="alno"  required>
+                  </div>
+                  <div class="input-box">
+                    
+                    <input type="hidden"  name="start" value="{{ start_formatted }}" >
+                    
+                  </div>
+                  <div class="input-box">
+                   
+                    <input type="hidden" name="end" value="{{ end_formatted }}" >
+                  </div>
+                  <div class="input-box">
+                    <input type="hidden" name="id" value="{{ vehicle_id }}">
+                  </div>
+                  
+                  
+                  
+                </div>
+                <div class="button">
+                  <input type="submit" value="Register">
+                </div>
+              </form>
+            </div>
+          </div>
+          
+    </section>
+   
+</body>
+
+</html>

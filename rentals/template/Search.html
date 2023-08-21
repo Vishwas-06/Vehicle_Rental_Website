@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travel Buddy | Availability </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style_avail.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html" target="_blank"><img src="{% static 'img/logo-removebg-preview.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                  <li><a href="http://127.0.0.1:8000/indexloginpage/">Home</a></li>
+                  <li><a href="http://127.0.0.1:8000/fleetpage/">Our Fleet</a></li>
+                  <li><a href="http://127.0.0.1:8000/leasepage/">Lease Your Bike</a></li>
+                  <li><a href="http://127.0.0.1:8000/offerspage/">Offers</a></li>
+                  <li><a href="http://127.0.0.1:8000/contactpage/">Contact</a></li>
+                  <li><a href="http://127.0.0.1:8000/indexpage/">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <form action="{% url 'availability' %}" method="post">
+            {% csrf_token %}
+
+        <div class="brand" >
+            <div class="image-div" >
+              {% for row in data %}
+                <img src="{{ row.image_path }}" style="width: 400px; height: 400px; margin-left: 4%; margin-bottom: 7%; ">
+                {% endfor %}
+            </div>
+            <div class="details" >
+
+            <table class="vertical-table">
+              {% for row in data %}
+                <tr>
+                  <th>Vehicle ID</th>
+                  <td>{{ row.vehicle_id }}</td>
+                </tr>
+                <tr>
+                  <th>Vehicle Brand</th>
+                  <td>{{ row.vehicle_brand }}</td>
+                </tr>
+                <tr>
+                  <th>Vehicle Model</th>
+                  <td>{{ row.vehicle_model }}</td>
+                </tr>
+                <tr>
+                  <th>Vehicle Type</th>
+                  <td>{{ row.vehicle_type }}</td>
+                </tr>
+                <tr>
+                  <th>Color</th>
+                  <td>{{ row.Vehicle_color }}</td>
+                </tr>
+                <tr>
+                  <th>Seating Capacity</th>
+                  <td>{{ row.seating_capacity }}</td>
+                </tr>
+                <tr>
+                  <th>Cost per Day</th>
+                  <td>{{ row.Vehicle_price_per_Day }}</td>
+                </tr>
+                <tr>
+                  <th> KM's Driven </th>
+                  <td>{{ row.kms_driven }}</td>
+                </tr>
+                <tr>
+                  <th>Rent Location ID</th>
+                  <td>{{ row.rent_location_id }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+            </div>
+              
+            <div class="dt">
+              <p>Enter your booking dates to go for booking page</p>
+              {% for row in data %}
+              <input type="hidden" name="id" value="{{ row.vehicle_id }}">
+              {% endfor %}
+              <input type="text" placeholder="ENTER START DATE " name="start" onclick="(this.type='datetime-local')" required>
+              <input type="text" placeholder="ENTER END DATE " name="end" onclick="(this.type='datetime-local')" required>
+              <input type="submit"> 
+              {% if message %}
+              <div class="alert">{{ message }}</div>
+              {% endif %}
+            </div>
+    </div>
+    </form>
+    </section>
+<!--------javascript--->
+<script>
+    // Get the start and end date input elements
+    var start = document.querySelector('input[name="start"]');
+    var end = document.querySelector('input[name="end"]');
+  
+    // Add an event listener for the submit event
+    document.querySelector('form').addEventListener('submit', function(event) {
+      // Split the start and end date values at the "T" character
+      var startParts = start.value.split('T');
+      var endParts = end.value.split('T');
+  
+      // Join the parts back together with a space character
+      var startFormatted = startParts[0] + ' ' + startParts[1];
+      var endFormatted = endParts[0] + ' ' + endParts[1];
+  
+      // Set the start and end date values to the formatted values
+      start.value = startFormatted;
+      end.value = endFormatted;
+    });
+  </script>
+
+
+
+</body>
+
+</html>

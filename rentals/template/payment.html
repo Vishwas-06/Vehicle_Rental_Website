@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Travel Buddy | Payment </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style_payment.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html" target="_blank"><img src="{% static 'img/logo-removebg-preview.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="http://127.0.0.1:8000/indexloginpage/">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/fleetpage/">Our Fleet</a></li>
+                    <li><a href="http://127.0.0.1:8000/leasepage/">Lease Your Bike</a></li>
+                    <li><a href="http://127.0.0.1:8000/offerspage/">Offers</a></li>
+                    <li><a href="http://127.0.0.1:8000/contactpage/">Contact</a></li>
+                    <li><a href="http://127.0.0.1:8000/indexpage/">Logout</a></li>
+                  </ul>
+            </div>
+        </nav>
+        
+	<div class="container">
+
+    <form action="{% url 'payment' %}" method="post">
+        {% csrf_token %}
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+                <input type="hidden" name="email" value="{{ email }}">
+                <input type="hidden" name="start" value="{{ start_formatted }}">
+                <input type="hidden" name="end" value="{{ end_formatted }}">
+                <input type="hidden" name="id" value="{{ vehicle_id }}">
+                <input type="hidden" name="license_no" value="{{ license_no }}">
+                <input type="hidden" name="ride" value="{{ ride }}">
+                <input type="hidden" name="alno" value="{{ alno }}">
+                <input type="hidden" name="reservation_id" value="{{ reservation_id }}">
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" name="user_name" placeholder="Enter your name" required>
+                </div>
+                <div class="inputBox">
+                    <span>phone number</span>
+                    <input type="text" name="ph_no" placeholder="Enter your number" required>
+                </div>
+                <div class="inputBox">
+                    <span>Amount paying through card</span>
+                    <input type="text" name="amt" placeholder="" required>
+                </div>
+                <div class="inputBox">
+                    <span>Address:</span>
+                    <input type="text" name="addr" placeholder="House-street-locality" required>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" name="state" placeholder="" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" name="zp_code" placeholder="123456" required>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="{% static 'img/card_img.png'%}" alt="" >
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" name="nameoncard" placeholder="Mr.Nithin" required>
+                </div>
+                <div class="inputBox">
+                    <span>card number :</span>
+                    <input type="text" name="card_no" placeholder="4200420042004200" required>
+                </div>
+                <div class="inputBox">
+                    <span>Exp month :</span>
+                    <input type="text" name="exp_month" placeholder="MM" required>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Exp year :</span>
+                        <input type="text" name="exp_year" placeholder="YY (last two digits)" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" name="cvv" placeholder="xxx" required>
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+
+    </form>
+
+</div> 
+</section>
+</body>
+</html>

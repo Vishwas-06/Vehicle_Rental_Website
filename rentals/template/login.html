@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travel Buddy | Login </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style_loginpage.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="http://127.0.0.1:8000/indexpage/" target="_blank"><img src="{% static 'img/logo-removebg-preview.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="http://127.0.0.1:8000/indexpage/">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Our Fleet</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Lease Your Bike</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Offers</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Contact</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    <div class="container">
+      <form action="#" method="post">
+        {% csrf_token %}
+        <div class="title">Login</div>
+        <div class="input-box underline">
+          <input type="text" placeholder="Enter Your Email" name="email" required>
+          <div class="underline"></div>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Enter Your Password" name="pass" required>
+          <div class="underline"></div>
+        </div>
+        <div class="input-box button">
+          <input type="submit" name="" value="Continue">
+        </div>
+        {% if message %}
+        <div class="alert">{{ message }}</div>
+        {% endif %}
+      </form>
+
+        <div class="twitter">
+          <a href="#"><i class="bi bi-google"></i>Sign in With Google</a>
+        </div>
+        <div class="facebook">
+          <a href="#"><i class="bi bi-facebook"></i>Sign in With Facebook</a>
+        </div>
+        <div class="option">Don't have an account? <a href="http://127.0.0.1:8000/registrationpage/"> signup </a></div>
+    </div>
+
+
+    </section>
+
+</body>
+
+</html>

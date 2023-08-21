@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Travel Buddy | Registration </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style333.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="http://127.0.0.1:8000/indexpage/" target="_blank"><img src="{% static 'img/logo-removebg-preview.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="http://127.0.0.1:8000/indexpage/">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Our Fleet</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Lease Your Bike</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Offers</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Contact</a></li>
+                    <li><a href="http://127.0.0.1:8000/loginPage/">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="#" method="post" id="form" onsubmit="checkPasswords();return false;">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" name="NAME" required>
+          </div>
+          <div class="input-box">
+            <span class="details">AADHAR NO</span>
+            <input type="text" placeholder="Enter your AADHAR NO" name="adrno" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" name="email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" name="contact" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" id="password" name="pass" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" id="confirm_password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            <input type="text" placeholder="Enter M or F" name="gender" required>
+          </div>
+        </div>
+        <div class="button">
+         <input type="submit" value="Register">
+        </div>
+        {% if message2 %}
+  <div class="alert2">
+    {{ message2 }}
+  </div>
+{% endif %}
+        <div>
+            <p>Already Have an account?</p><a href="http://127.0.0.1:8000/loginPage/"><p>login here</p></a>
+        </div>
+      </form>
+    </div>
+  </div>
+    </section>
+
+    <script>
+      window.onload = function() {
+        function checkPasswords() {
+            var pass = document.getElementById("password").value;
+            var confirm_pass = document.getElementById("confirm_password").value;
+            if (pass != confirm_pass) {
+            alert("Passwords do not match!");
+            return false;
+            }
+            return true;
+        }
+        document.getElementById("form").onsubmit = function() {
+        return checkPasswords();
+        }
+      }
+    </script>
+    
+</body>
+
+</html>

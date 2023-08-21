@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> TRAVEL BUDDY | Brands </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style_brand.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html" target="_blank"><img src="{% static 'img/logo-removebg-preview.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="bi bi-x" onclick="hideMenu()"></i>
+                <ul>
+                  <li><a href="http://127.0.0.1:8000/indexloginpage/">Home</a></li>
+                  <li><a href="http://127.0.0.1:8000/fleetpage/">Our Fleet</a></li>
+                  <li><a href="http://127.0.0.1:8000/leasepage/">Lease Your Bike</a></li>
+                  <li><a href="http://127.0.0.1:8000/offerspage/">Offers</a></li>
+                  <li><a href="http://127.0.0.1:8000/contactpage/">Contact</a></li>
+                  <li><a href="http://127.0.0.1:8000/indexpage/">Logout</a></li>
+                </ul>
+            </div>
+
+            <i class="bi bi-list" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <section class="facilities">
+        <h1>Our Most Renting bikes</h1>
+        <p>Click on your fav model to explore more</p>
+        <div class="row1">
+            {% for row in data %}
+              <div class="facilities-col">
+                <a href="{% url 'bikeselection' %}?vehicle_model={{ row.vehicle_model }}">
+                  <img src="{{ row.image_path }}">
+                </a>
+                <h3>{{ row.vehicle_model }}</h3>
+                <p> Cost: {{ row.Vehicle_price_per_Day }}₹/day <br> Km's Driven: {{ row.kms_driven}} kms </p>
+              </div>
+            {% endfor %}
+          </div>
+
+    </section>
+
+    <!----call to action -->
+
+    <section class="cta">
+        <h1> Have any Queries feel free to get in touch....</h1>
+        <a href="http://127.0.0.1:8000/contactpage/" class="hero-btn">Contact US</a>
+
+    </section>
+
+    <!-----Footer----->
+    <section class="footer">
+        <h4>About us</h4>
+        <p> Bike rentals is a shared mobility offering that allows users to own the vehicle for only the duration of their need and return after it. <br>It is a much better option economically. Users do not have to invest a huge sum of money to buy vehicles and instead spend a small amount as and when they need a two wheeler. Users also need not <br>take the burden of insurance and maintenance. We also provide 24/7 roadside assistance to customers who rent a bike in Bangalore.
+
+            Two wheelers on rent in Bangalore is a much safer <br>alternative to public transport. Users can travel to places without being dependent on anyone else while also maintaining social distance. Bike rentals in Bangalore is <br>also a safer alternative to cabs because the user doesn’t share the ride with anyone else.</p>
+        <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+
+        </div>
+
+    </section>
+</body>
+
+</html>
